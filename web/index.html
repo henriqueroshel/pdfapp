@@ -1,0 +1,48 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+	<meta charset="UTF-8" /> 
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+	<link rel="stylesheet" href="/styles/style.css">
+	<script type="text/javascript" src="../eel.js"></script> 
+	<script type="text/javascript" src="./script.js"></script> 
+    <title>PDF Merger App</title> 
+</head>
+
+<h1>Merge PDF files</h1>
+
+<body> 
+
+	<h2>Select PDF files to be merged</h2>
+	<div id="file-selection">
+		<select id="selected-files" multiple="multiple" class="resizable-selection-list"></select>
+		<div id="file-selection-buttons">
+			<button onclick="uploadFiles()">Upload files</button>
+			<button onclick="clearSelectedFiles()">Remove file(s)</button>
+			<button onclick="clearAllFiles()">Clear all</button>
+			<button onclick="moveFilesUp()">Move file(s) up</button>
+			<button onclick="moveFilesDown()">Move file(s) down</button>
+		</div>
+		<div id="merge-files">
+			<div id="bookmarks">
+
+				<label class="container"><h3>Include bookmarks</h3>
+					<input type="checkbox" id="include-bookmarks">
+					<span class="checkmark">
+				</label>
+
+			</div>
+			<button onclick="mergeFiles()"><b>MERGE FILES</b></button>
+		</div>
+
+	</div>
+
+	<input type="file" id="files-for-upload" multiple="multiple" accept=".pdf" onchange="loadFiles()">
+
+	<footer>
+	</footer>
+
+
+</body> 
+</html>
