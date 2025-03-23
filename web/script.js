@@ -61,6 +61,7 @@ function mergeFiles() {
     }
     const includeBookmarks = document.getElementById('include-bookmarks').checked;
     eel.merge_pdf_files_py(filesIdsList, includeBookmarks)(function(result) {
+        console.log(result[0])
         download(result[1], 'MERGED_PDF.pdf');
     });
 }

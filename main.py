@@ -22,7 +22,6 @@ def remove_file_content(file_id):
     global files_base64
     file_id = int(file_id)
     files_base64.pop(file_id)
-    # print({b64:files_base64[b64][-20:] for b64 in files_base64})
 
 @eel.expose
 def merge_pdf_files_py(files_id_list, add_bookmarks):
